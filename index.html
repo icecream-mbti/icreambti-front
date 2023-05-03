@@ -5,23 +5,55 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
 
-  <title></title>
-  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-BmbxuPwQa2lc/FVzBcNJ7UAyJxM6wuqIj61tLrc4wSX0szH/Ev+nYRRuWlolflfl" crossorigin="anonymous">
-  <link rel="preconnect" href="https://fonts.gstatic.com">
+  <title>나는 어떤 아이스크림일까?</title>
   <link href="https://fonts.googleapis.com/css2?family=Nanum+Pen+Script&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="./css/main.css">
+  <link rel="stylesheet" href="./css/qna.css">
 </head>
 
 <body>
   <div class="container">
-    <section id="main" class="mx-auto my-5 py-5 px-3">
-      <h1>나는 어떤 아이스크림일까?</h1>
-      
+    <section id="main">
+      <h1 class="main_txt">내가 아이스크림이라면?</h1>
+      <img id="main_img" class="mt-4" src="./img/main_test.png" alt="">
+      <button type="button" class="btn_start" onclick="start();">시작하기 👉</button>
+      <div class="from text-center">
+        <p>만든사람: 예원, 한비</p>
+        <p>contact <a href="">yewo2nn16@gmail.com</a></p>
+        <!-- <p>instagram <a href="" target="_blank">@yewon</a> </p>
+        <p>ⓒICECREAM, All rights reserved.</p> -->
+        </div>
+
     </section>
-    <section id="qna" class="mx-auto my-5 py-5 px-3">
-        
+    <section id="qna">
+      <input type="hidden" id="page" value="0" />
+      <input type="hidden" id="E" value="0" />
+      <input type="hidden" id="I" value="0" />
+      <input type="hidden" id="S" value="0" />
+      <input type="hidden" id="N" value="0" />
+      <input type="hidden" id="T" value="0" />
+      <input type="hidden" id="F" value="0" />
+      <input type="hidden" id="P" value="0" />
+      <input type="hidden" id="J" value="0" /> 
+      <div class="question">
+        <div class="page"><span id="cnt">1</span>/12</div>
+        <h2 id="title" class="text-center">아이스크림을 먹다가 잠에 들었다… <br>눈을 떠보니 아이스크림이 걸어다니는 이상한 마을인 것 같다. 이럴 때 나는?</h2>
+      </div>
+      <div class="answers">
+        <a href="javascript:select();" id="A" style="text-decoration: none;">
+          <div class="btn_select">주변 아이스크림한테 말걸듯 "저,,안녕하세요! 되게 스타일이 좋으시네요~혹시 여기 사시는거에요? 저 좀 도와주실 수 있나요ㅠㅠ이상한 사람 절대 아니에요ㅜㅜ "</div>
+        </a>
+        <a href="javascript:select();" id="B" style="text-decoration: none;">
+          <div class="btn_select mt-4">혼자 주위를 살피며 파악한다.</div>
+        </a>
+      </div>
     </section>
+    <script src="./js/data.js" charset="utf-8"></script>
     <script src="./js/start.js" charset="utf-8"></script>
+    <script
+      src="https://code.jquery.com/jquery-3.6.4.js"
+      integrity="sha256-a9jBBRygX1Bh5lt8GZjXDzyOB+bWve9EiO7tROUtj/E="
+      crossorigin="anonymous"></script>
   </div>
 </body>
 
