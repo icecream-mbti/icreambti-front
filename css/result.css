@@ -3,6 +3,7 @@
 }
 
 #result_img {
+    max-width: 255px;
     margin: 0 auto;
 }
 
