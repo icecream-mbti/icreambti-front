@@ -45,25 +45,27 @@ button {
     font-weight: 900;
 }
 
-.btn_start {
+#main .btn_start {
     width: 255px;
     height: 60px;
     border-radius: 100em;
     font-weight: 450;
-    margin: 0 auto;
-    background: linear-gradient(90deg, #4abbf3 0%, #4abbf3 113.62%);
     border-radius: 80px;
     border: 0;
-    color: #FFF;
 
     margin: 30px auto auto auto;
 }
 
-.from {
+#main .from {
     color: #828282;
     margin-top: 52px;
 }
 
 .mt-4 {
     margin-top: 24px;
+}
+
+.sky {
+    background: linear-gradient(90deg, #4abbf3 0%, #4abbf3 113.62%);
+    color: #FFF;
 }
