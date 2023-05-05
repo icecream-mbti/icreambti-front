@@ -52,6 +52,38 @@ function select(type) {
 function end() {
     qna.style.display = "none";
     result.style.display = "block";
+
+    let mbti = {
+        E : document.getElementById("E").value,
+        I : document.getElementById("I").value,
+        S : document.getElementById("S").value,
+        N : document.getElementById("N").value,
+        T : document.getElementById("T").value,
+        F : document.getElementById("F").value,
+        P : document.getElementById("P").value,
+        J : document.getElementById("J").value
+    }
+
+    $.ajax({
+        url : `${server}/icecreammbti/test`,
+        headers: {'Content-Type': 'application/json'},
+        data : mbti,
+        type : "POST",
+
+        success: function(data) {
+            document.querySelector("#result .loader").style.display = "none";
+            document.querySelector("#result .fin").style.display = "block";
+    
+            alert(data);
+        },
+
+        error: function(request, status, error) {
+            document.querySelector("#result .loader").style.display = "none";
+            document.querySelector("#result .fin").style.display = "block";
+    
+            alert(error);
+        }
+    });
 }
 
 function retest() {

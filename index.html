@@ -50,16 +50,20 @@
       </div>
     </section>
     <section id="result">
-      <img id="result_img" class="mt-4" src="./img/result_test.png" alt="">
-      <div class="form">
-        <p>👆 이미지 꾹 눌러 결과 저장하기</p>
+      <div class="loader">Loading...</div>
+      <div class="fin">
+        <img id="result_img" class="mt-4" src="./img/result_test.png" alt="">
+        <div class="form">
+          <p>👆 이미지 꾹 눌러 결과 저장하기</p>
+        </div>
+        <button type="button" class="btn_restart sky" onclick="retest();">테스트 다시하기</button>
+        <button type="button" class="btn btn_link" onclick="copylink()">링크 복사하고 공유하기</button>
       </div>
-      <button type="button" class="btn_restart sky" onclick="retest();">테스트 다시하기</button>
-      <button type="button" class="btn btn_link" onclick="copylink()">링크 복사하고 공유하기</button>
     </section>
 
     <script src="./js/data.js" charset="utf-8"></script>
     <script src="./js/start.js" charset="utf-8"></script>
+    <script src="./js/api.js" charset="utf-8"></script>
     <script
       src="https://code.jquery.com/jquery-3.6.4.js"
       integrity="sha256-a9jBBRygX1Bh5lt8GZjXDzyOB+bWve9EiO7tROUtj/E="
