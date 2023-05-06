@@ -53,7 +53,7 @@ function end() {
     qna.style.display = "none";
     result.style.display = "block";
 
-    let mbti = {
+    let mbti = JSON.stringify({
         E : document.getElementById("E").value,
         I : document.getElementById("I").value,
         S : document.getElementById("S").value,
@@ -62,26 +62,27 @@ function end() {
         F : document.getElementById("F").value,
         P : document.getElementById("P").value,
         J : document.getElementById("J").value
-    }
+    });
+    mbtiReset();
 
     $.ajax({
-        url : `${server}/icecreammbti/test`,
+        url : `${server}/mbti/result`,
         headers: {'Content-Type': 'application/json'},
         data : mbti,
         type : "POST",
 
         success: function(data) {
+            document.querySelector("#result #result_img").src = `./img/${data}.png`;
+
             document.querySelector("#result .loader").style.display = "none";
             document.querySelector("#result .fin").style.display = "block";
-    
-            alert(data);
         },
 
         error: function(request, status, error) {
-            document.querySelector("#result .loader").style.display = "none";
-            document.querySelector("#result .fin").style.display = "block";
+            qna.style.display = "block";
+            result.style.display = "none";
     
-            alert(error);
+            console.log(error);
         }
     });
 }
@@ -90,6 +91,17 @@ function retest() {
     main.style.display = "flex";
     qna.style.display = "none";
     result.style.display = "none";
+}
+
+function mbtiReset() {
+    document.getElementById("E").value = 0;
+    document.getElementById("I").value = 0;
+    document.getElementById("S").value = 0;
+    document.getElementById("N").value = 0;
+    document.getElementById("T").value = 0;
+    document.getElementById("F").value = 0;
+    document.getElementById("P").value = 0;
+    document.getElementById("J").value = 0;
 }
 
 function copylink() {
