@@ -11,7 +11,7 @@
 .page {
   color: #4abbf3;
   font-weight: 600;
-  font-size: 16px;
+  font-size: 14px;
 }
 
 .answers {
@@ -27,7 +27,7 @@
   border-radius: 8px;
   font-weight: 500;
   padding: 34px 18px 34px 26px;
-  font-size: 18px;
+  font-size: 16px;
   line-height: 1.44;
   text-align: center;
   cursor: pointer;
