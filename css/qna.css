@@ -34,7 +34,9 @@
   color: #000;
 }
 
-.btn_select:hover {
-  background-color: #4abbf3;
-  color: #FFF;
+@media (hover: hover) {
+  .btn_select:hover {
+    background-color: #4abbf3;
+    color: #FFF;
+  }
 }
